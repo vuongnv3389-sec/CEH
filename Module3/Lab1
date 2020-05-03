@@ -61,29 +61,6 @@ hping in flood mode, no replies will be shown
 1052409 packets transmitted, 0 packets received, 100% packet loss
 round-trip min/avg/max = 0.0/0.0/0.0 ms
 
-==> On the same network, another machine cannot go outside the internet (from 6 request) while attack machine is performing TCP flooding
-C:\>ping 8.8.8.8 -t
-
-Pinging 8.8.8.8 with 32 bytes of data:
-Reply from 8.8.8.8: bytes=32 time=716ms TTL=53
-Reply from 8.8.8.8: bytes=32 time=41ms TTL=53
-Reply from 8.8.8.8: bytes=32 time=105ms TTL=53
-Reply from 8.8.8.8: bytes=32 time=48ms TTL=53
-Reply from 8.8.8.8: bytes=32 time=1555ms TTL=53
-Request timed out.
-No resources.
-No resources.
-
-Ping statistics for 8.8.8.8:
-    Packets: Sent = 8, Received = 5, Lost = 3 (37% loss),
-Approximate round trip times in milli-seconds:
-    Minimum = 41ms, Maximum = 1555ms, Average = 493ms
-Control-C
-^C
-C:\>
-
-
-
 
 
 
